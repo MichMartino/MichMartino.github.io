@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head><meta charset="utf-8">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <link rel="stylesheet" href="./css/mystyle.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Login</title>
+    </head>
+<body>
+    <div class="navbar">
+
+        <a href="Index.html">Home</a>
+        <a href="ArteDigitale.html">Arte digitale</a>
+        <a href="ArteFisica.html">Arte fisica</a>
+        <a href="ComeDisegnare.html">Come disegnare</a>
+        <a href="login.html" class="active">Login</a>
+        <a href="Registrati.html"class="right">Registrati</a>
+
+    </div>
+
+    <center>
+    <div class="content">
+        <h2>Login</h2>
+        <form action="#">
+            <label for="username">Nome utente:</label>
+            <br>
+            <input type="text" id="username" name="username">
+            <br>
+            <label for="password">Password:</label>
+            <br>
+            <input type="password" id="password" name="password">
+            <br>
+            <button id="bottoneLogin" class="button2" style="float: none;">Login</button>
+        </form>
+    </div>
+
+    </center>
+
+    <script>
+
+        const name = document.getElementById("username")  //salvo il valore in una CONST, non posso rischiare il dato dato in input dall'utente
+        const pwd = document.getElementById("password")
+
+        const registra = document.getElementById("bottoneLogin")
+
+        registra.addEventListener("click", function(e) {
+
+            console.log(name);  //stampa l'html di riferimento
+            console.log(name.value); //stampa il valore
+            console.log(typeof name.value); //per vedere il tipo
+
+            if(name.value == 'usernome' && pwd.value == 'passwor'){
+
+                alert("Ciao " + name.value);
+
+            } else{
+
+                alert("Nome utente o password non corretti");
+            }
+
+
+            //Stampare una stringa
+            
+        })
+
+   </script>
+
+</body>
+</html>
